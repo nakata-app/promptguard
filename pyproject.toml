@@ -1,0 +1,48 @@
+[project]
+name = "promptguard"
+version = "0.0.1"
+description = "Prompt injection / jailbreak detection — the input-side gate of the no-LLM-judge stack."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "atakan" }]
+keywords = ["llm", "prompt-injection", "jailbreak", "safety", "rag", "halluguard"]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Security",
+]
+
+# v0.0 has no runtime deps (only stubs).
+# v0.1 adds: regex (stdlib), optionally `transformers` for the classifier path.
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+classifier = ["transformers>=4.40", "torch>=2.0"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["promptguard*"]
+
+[tool.setuptools.package-data]
+promptguard = ["py.typed"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
