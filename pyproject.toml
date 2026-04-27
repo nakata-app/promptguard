@@ -25,6 +25,9 @@ dependencies = []
 dev = ["pytest>=8.0", "ruff>=0.5"]
 classifier = ["transformers>=4.40", "torch>=2.0"]
 
+[project.scripts]
+promptguard = "promptguard.__main__:main"
+
 [build-system]
 requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
