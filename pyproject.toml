@@ -46,3 +46,9 @@ addopts = "-q"
 [tool.mypy]
 python_version = "3.10"
 strict = true
+
+[[tool.mypy.overrides]]
+# transformers is the [classifier] optional extra; not always installed
+# at typecheck time. Silence import-not-found.
+module = ["transformers", "transformers.*"]
+ignore_missing_imports = true
