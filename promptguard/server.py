@@ -23,7 +23,6 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from typing import Any
 
 from promptguard.guard import PromptGuard
-from promptguard.types import Action
 
 _guard: PromptGuard | None = None
 
