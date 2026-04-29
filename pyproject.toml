@@ -1,6 +1,6 @@
 [project]
-name = "promptguard"
-version = "0.0.1"
+name = "nakata-promptguard"
+version = "0.1.0"
 description = "Prompt injection / jailbreak detection — the input-side gate of the no-LLM-judge stack."
 readme = "README.md"
 requires-python = ">=3.10"

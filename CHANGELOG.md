@@ -23,7 +23,7 @@ what to do).
   preludes, payload smuggling).
 - Optional classifier path, ProtectAI deberta-v3-base prompt-injection
   classifier, gated behind `[classifier]` extras
-  (`pip install promptguard[classifier]`).
+  (`pip install "nakata-promptguard[classifier]"`).
 - `python -m promptguard serve` HTTP daemon for cross-language
   callers.
 - `Detector` protocol so callers can plug in alternate classifiers
@@ -36,5 +36,8 @@ what to do).
 - English-first by design; multilingual (Turkish in particular) is a
   v0.2 design decision (xlm-roberta zero-shot vs translate-first vs
   fine-tune).
+- PyPI distribution name: `nakata-promptguard` (the bare `promptguard`
+  slug is held by Opaque Systems' unrelated package). Import path
+  stays `promptguard`.
 
 [0.1.0]: https://github.com/nakata-app/promptguard/releases/tag/v0.1.0
