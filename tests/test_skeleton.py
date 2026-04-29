@@ -17,7 +17,7 @@ CLASSIFIER_AVAILABLE = importlib.util.find_spec("transformers") is not None
 def test_imports_and_version():
     import promptguard
 
-    assert promptguard.__version__ == "0.0.1"
+    assert promptguard.__version__ == "0.1.0"
     assert promptguard.PromptGuard is not None
     assert promptguard.Verdict is not None
     assert promptguard.Action is not None
